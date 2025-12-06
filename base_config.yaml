@@ -1,0 +1,28 @@
+# [User Constraints] 감독관이 정한 절대 규칙
+constraints:
+  max_params: 11500000
+
+# [Data Paths] 데이터 위치 (변경 시 필수 수정)
+data:
+  img_size: 112       # 모델 입력 크기 (고정하는 것이 좋음)
+  num_classes: 2882   # train1 기준 (train2면 949)
+  train1_path: data/train1
+  train2_path: data/train2
+  val_path: data/val
+  test_list: data/val_pairs.csv
+
+# [Training Budget] 학습 예산 및 하드웨어 설정
+train:
+  batch_size: 512       # VRAM에 맞춰 설정
+  num_workers: 8        # CPU 코어 수 고려
+  epochs_full: 10       # 전체 학습 Epoch
+  epochs_fast: 1        # Fast 모드 Epoch
+  early_stop_patience: 5
+  early_stop_delta: 0.0
+  use_amp: true         # Mixed Precision (속도/메모리 이점)
+  grad_accum_steps: 1   # 기본값 (LLM이 필요하면 내부적으로 바꿀 수 있음)
+
+max_experiments: 100
+mode: full              # fast 또는 full
+seed: 42
+test_mode: false

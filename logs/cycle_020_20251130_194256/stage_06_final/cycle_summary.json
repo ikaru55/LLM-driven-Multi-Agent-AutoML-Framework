@@ -1,0 +1,21 @@
+{
+  "cycle_id": 20,
+  "timestamp": "2025-11-30 20:58:55",
+  "status": "Success",
+  "metrics": {
+    "eer": 0.0,
+    "val_acc": 0.0,
+    "train_acc": 0.03
+  },
+  "dynamics": {
+    "best_epoch": 5,
+    "total_epochs": 10,
+    "final_grad_norm": 0.4405,
+    "final_train_loss": 1.7711,
+    "final_val_loss": 99.9
+  },
+  "efficiency": {
+    "params": 4544670,
+    "speed": 440.89399999999995
+  }
+}

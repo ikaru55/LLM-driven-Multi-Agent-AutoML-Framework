@@ -1,0 +1,58 @@
+{
+  "timestamp": "2025-11-30T21:30:49.015424",
+  "original": {
+    "constraints": {
+      "max_params": 11500000
+    },
+    "data": {
+      "img_size": 112,
+      "num_classes": 2882,
+      "train1_path": "data/train1",
+      "train2_path": "data/train2",
+      "val_path": "data/val",
+      "test_list": "data/val_pairs.csv"
+    },
+    "train": {
+      "batch_size": 512,
+      "num_workers": 8,
+      "epochs_full": 10,
+      "epochs_fast": 1,
+      "early_stop_patience": 3,
+      "early_stop_delta": 1.0,
+      "use_amp": true,
+      "grad_accum_steps": 1
+    },
+    "max_experiments": 100,
+    "mode": "full",
+    "seed": 42,
+    "test_mode": false
+  },
+  "patch": {},
+  "patched": {
+    "constraints": {
+      "max_params": 11500000
+    },
+    "data": {
+      "img_size": 112,
+      "num_classes": 2882,
+      "train1_path": "data/train1",
+      "train2_path": "data/train2",
+      "val_path": "data/val",
+      "test_list": "data/val_pairs.csv"
+    },
+    "train": {
+      "batch_size": 512,
+      "num_workers": 8,
+      "epochs_full": 10,
+      "epochs_fast": 1,
+      "early_stop_patience": 3,
+      "early_stop_delta": 1.0,
+      "use_amp": true,
+      "grad_accum_steps": 1
+    },
+    "max_experiments": 100,
+    "mode": "full",
+    "seed": 42,
+    "test_mode": false
+  }
+}

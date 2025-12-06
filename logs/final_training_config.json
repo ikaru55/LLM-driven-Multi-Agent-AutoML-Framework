@@ -1,0 +1,44 @@
+{
+  "constraints": {
+    "max_params": 11500000
+  },
+  "data": {
+    "img_size": -1,
+    "train1_path": "data/train1",
+    "train2_path": "data/train2",
+    "val_path": "data/val",
+    "test_list": "data/val_pairs.csv"
+  },
+  "max_experiments": 3,
+  "mode": "fast",
+  "seed": 42,
+  "train": {
+    "batch_size": 512,
+    "epochs_full": 30,
+    "epochs_fast": 1,
+    "optimizer": "sgd",
+    "lr": 0.1,
+    "weight_decay": 0.0005,
+    "momentum": 0.9,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "scheduler": "cosine",
+    "scheduler_step_size": 10,
+    "scheduler_gamma": 0.1,
+    "scheduler_tmax": 30,
+    "loss": "cross_entropy",
+    "use_amp": true,
+    "use_compile": true,
+    "grad_accum_steps": 1,
+    "channels_last": true,
+    "num_workers": 8,
+    "prefetch_factor": 2,
+    "print_interval": 20,
+    "early_stop_patience": 5,
+    "early_stop_delta": 0.3
+  },
+  "fast_epoch_override": 3
+}
